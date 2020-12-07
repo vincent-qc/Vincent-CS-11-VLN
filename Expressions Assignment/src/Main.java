@@ -21,7 +21,7 @@ public class Main {
         System.out.println(5 + 5 - (-4)/3);
         System.out.println(10 - (-4/3));
         System.out.println(10 + 4/3);
-        System.out.println(10 + 1); // 4/3 is rounded to 1 after convert to int
+        System.out.println(10 + 1); // 4/3 is changed to 1 after convert to int
         System.out.println(11);
 
         //Expression 2
