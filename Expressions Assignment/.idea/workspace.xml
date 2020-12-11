@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80bbdd9f-3033-402a-ab04-29bab8c8dee6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -54,17 +54,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,7 +97,8 @@
       <workItem from="1532532032237" duration="1693000" />
       <workItem from="1533049545035" duration="11000" />
       <workItem from="1533334990865" duration="19000" />
-      <workItem from="1607140753668" duration="1450000" />
+      <workItem from="1607140753668" duration="1799000" />
+      <workItem from="1607143050705" duration="18000" />
     </task>
     <servers />
   </component>
@@ -116,26 +106,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1607142158114">
-      <screen x="0" y="25" width="1920" height="970" />
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1607142634961">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142128531" />
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142158114" />
-    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1607142158112">
-      <screen x="0" y="25" width="1920" height="970" />
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142634961" />
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142232504" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1607142634938">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.center/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142128529" />
-    <state width="1878" height="305" key="GridCell.Tab.0.center/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142158112" />
-    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1607142158111">
-      <screen x="0" y="25" width="1920" height="970" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142634938" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142232498" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1607142634937">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.left/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142128528" />
-    <state width="1878" height="305" key="GridCell.Tab.0.left/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142158111" />
-    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1607142158114">
-      <screen x="0" y="25" width="1920" height="970" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142634937" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142232497" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1607142634960">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.right/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142128530" />
-    <state width="1878" height="305" key="GridCell.Tab.0.right/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142158114" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right/1920.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607142634960" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right/1920.205.1440.875/0.25.1920.970@0.25.1920.970" timestamp="1607142232499" />
   </component>
   <component name="masterDetails">
     <states>
