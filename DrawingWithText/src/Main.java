@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
         String bk = "\u001b[30m"; // Black
         String bu = "\u001b[34;1m"; // Blue
-        String w = "\u001b[37m"; // White
         String r = "\u001b[0m"; // Reset
         String rd = "\u001b[31m"; // Red
 
