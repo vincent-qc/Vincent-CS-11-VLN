@@ -36,6 +36,42 @@ public class Main {
                 "\n" + "                        ||  \\/   //    /  \\" + bu + "ccccchhh" + r + "_.=`" +
                 "\n" + "                      .-\\\\_.‘.__||  ’=.__/``-\\%%;-’`" +
                 "\n" + "                      \\vvv/`\\vvv/_/     ,_  \\" +
-                "\n" + "                        \\____-’    \\__-’  `-’");
+                "\n" + "                        \\____-’    \\__-’  `-’"
+        );
+
+        /* The Printed Image (without color)
+        *
+        *                                    /\
+        *                                   /c\\
+        *                                  ‘ch.\\
+        *                                _/`’ <\c;
+        *      \%-.__                    \   ,  \c\
+        *       \\hc`:=--._              /  _\  .hc|
+        *        \ `hhcccccc``~-._.^_.--`-~` <    \c\
+        *        <\   `.hcccccccccccccchhhhhhh^`.  |ccc\
+        *          / ^.   `hhccccccccccccccccccccc./hcc|\
+        *          `~\~__/`hhhcccccccccccccccccccccccc`\
+        *             |hhcc/ccccc cccc|hc/|hc\hccc\hcc\hc|
+        *             /hhhccc/\hhhhhcc|c/ \hcc|cccc|ccc\hc\
+        *            |hhccc|/ |hhhhhh/|c|  \hc|cccc|cccc\c|
+        *            /hhhcc|   \hhhhh!%/    \h|cccc|ccccc`=-._
+        *          ./hhhhhh|    \hhc/|/     \/cccc/ccccchhhh/
+        *          |c/hccc%      `\c//        \ccccccchh`~=^`
+        *           /hhcc|| |! !|  ``   |!  ! /cccccccchhhh|\
+        *         _/hhhhc|\  `^^’       \::;/ |cccc|\hhhhhh|c%/
+        *        \hhccccc|h\       W          |cccc|hhhcccc\=`
+        *         `-|cccc|h|`-..___________..~/cccc|hhccccccc|;
+        *           |cccc|h| \hhccc\#######/h/hhccc|hhhhccc`\
+        *           \hccc\hc\ \hhhc/#######`-/ccccc/hhhhhhhh/   /\
+        *            \hccc\`=` \.`##########/ccccc/|hhhhhh\    /cc\
+        *             \\;;/     `\_/`VVVV/\/_..-’` `\_/`’   .*`cch|
+        *                        \\  \VV/   //\_          _-/cccchh/
+        *                        ||  |V/   // /`-_  __.-`cccccchh/
+        *                        ||  \/   //    /  \ccccchhh_.=`
+        *                      .-\\_.‘.__||  ’=.__/``-\%%;-’`
+        *                      \vvv/`\vvv/_/     ,_  \
+        *                        \____-’    \__-’  `-’
+        *
+        */
     }
 }
