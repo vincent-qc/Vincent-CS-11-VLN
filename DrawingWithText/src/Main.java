@@ -28,10 +28,10 @@ public class Main {
                 "\n" + "         _/" + bu + "hhhhc" + r + "|\\  `^^’       \\::;/ |" + bu + "cccc" + r + "|\\" + bu + "hhhhhh" + r + "|" + bu + "c" + r + "%/" +
                 "\n" + "        \\" + bu + "hhccccc" + r + "|" + bu + "h" + r + "\\       W          |" + bu + "cccc" + r + "|" + bu + "hhhcccc" + r + "\\=`" +
                 "\n" + "         `-|" + bu + "cccc" + r + "|" + bu + "h" + r + "|`-..___________..~/" + bu + "cccc" + r + "|" + bu + "hhccccccc" + r + "|;" +
-                "\n" + "           |" + bu + "cccc" + r + "|" + bu + "h" + r + "| \\" + bu + "hhccc" + r + "\\" + bk + "ccccccc" + r + "/" + bu + "h" + r + "/" + bu + "hhccc" + r + "|" + bu + "hhhhccc" + r + "`\\" +
-                "\n" + "           \\" + bu + "hccc" + r + "\\" + bu + "hc" + r + "\\ \\" + bu + "hhhc" + r + "/" + bk + "ccccccc" + r + "`-/" + bu + "ccccc" + r + "/" + bu + "hhhhhhhh" + r + "/   /\\" +
-                "\n" + "            \\" + bu + "hccc" + r + "\\`=` \\.`" + bk + "cccccccccc" + r + "/" + bu + "ccccc" + r + "/|" + bu + "hhhhhh" + r + "\\    /" + bu + "cc" + r + "\\" +
-                "\n" + "             \\\\;;/     `\\_/`" + rd + "VVV" + r + "./\\/_..-’` `\\_/`’   .*`" + bu + "cch" + r + "|" +
+                "\n" + "           |" + bu + "cccc" + r + "|" + bu + "h" + r + "| \\" + bu + "hhccc" + r + "\\" + bk + "#######" + r + "/" + bu + "h" + r + "/" + bu + "hhccc" + r + "|" + bu + "hhhhccc" + r + "`\\" +
+                "\n" + "           \\" + bu + "hccc" + r + "\\" + bu + "hc" + r + "\\ \\" + bu + "hhhc" + r + "/" + bk + "#######" + r + "`-/" + bu + "ccccc" + r + "/" + bu + "hhhhhhhh" + r + "/   /\\" +
+                "\n" + "            \\" + bu + "hccc" + r + "\\`=` \\.`" + bk + "##########" + r + "/" + bu + "ccccc" + r + "/|" + bu + "hhhhhh" + r + "\\    /" + bu + "cc" + r + "\\" +
+                "\n" + "             \\\\;;/     `\\_/`" + rd + "VVVV" + r + "/\\/_..-’` `\\_/`’   .*`" + bu + "cch" + r + "|" +
                 "\n" + "                        \\\\  \\" + rd + "VV" + r + "/   //\\_          _-/" + bu + "cccchh" + r + "/" +
                 "\n" + "                        ||  |" + rd + "V" + r + "/   // /`-_  __.-`" + bu + "cccccchh" + r + "/" +
                 "\n" + "                        ||  \\/   //    /  \\" + bu + "ccccchhh" + r + "_.=`" +
