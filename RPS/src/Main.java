@@ -46,15 +46,38 @@ public class Main {
         }
     }
 
+    /**
+     * Takes in two Strings and creates decorated text
+     * [This Method is for Decorative Purposes ONLY]
+     *
+     * @param outcome The Outcome String
+     * @param results The Results String
+     * @return Returns decorated text as String
+     */
     private static String generateResultsText(String outcome, String results) {
+
+        // Initialize the Variables
         String borderLine = "─".repeat((results.length() / 2) - (outcome.length() / 2) + 2);
+        int totalLineLength = borderLine.length() * 2 + outcome.length();
+
+        // Returns the Padded String with certain color
         return "\u001b[31m \n ┌" + borderLine + outcome + borderLine + "┐" +
-                "\n │ \u001b[0m" + padString(results, borderLine.length() * 2 + outcome.length() - 3) + "\u001b[31m │" +
-                "\n └" + "─".repeat(borderLine.length() * 2 + outcome.length()) + "┘";
+                "\n │ \u001b[0m" + padString(results, totalLineLength - 3) + "\u001b[31m │" +
+                "\n └" + "─".repeat(totalLineLength) + "┘";
     }
 
+    /**
+     * Pads String to fit length
+     * [This Method is for Decorative Purposes ONLY]
+     *
+     * @param text The String to pad
+     * @param length The Length to pad it to
+     * @return Returns the padded String
+     */
     private static String padString(String text, int length) {
         StringBuilder strBuilder = new StringBuilder(text);
+
+        // Checks if the String is less than the length
         while(strBuilder.length() <= length) {
             if(strBuilder.length() < length - 1) strBuilder.insert(0, " ");
             strBuilder.append(" ");
