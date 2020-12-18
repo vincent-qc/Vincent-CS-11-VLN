@@ -43,6 +43,7 @@ public class Main {
 
     /**
      * Creates and Returns HashMap => Key: String, Value: String of the winning RPS values
+     * [This Method is for Decorative Purposes ONLY]
      *
      * @return Returns a HashMap with the Winning Values for RPS
      */
@@ -59,6 +60,7 @@ public class Main {
 
     /**
      * Takes in a Letter and Returns the full name
+     * [This Method is for Decorative Purposes ONLY]
      *
      * @param letter The input letter
      * @return Returns a String with the full name of the letter
