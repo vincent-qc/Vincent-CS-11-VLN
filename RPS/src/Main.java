@@ -29,16 +29,38 @@ public class Main {
                 continue;
             }
 
+            String outcome;
+            String results = "Bot: " + getFullName(botChoice) + " || User: " + getFullName(userChoice.substring(0, 1));
+
             // Compares bot value to user value and determines the winner
             if (botChoice.equals(userChoice)) {
-                System.out.println("Draw");
+                outcome = " Tie. ";
             } else if (botChoice.equals(winningValues.get(userChoice))) {
-                System.out.println("Win");
+                outcome = " You Won! ";
             } else {
-                System.out.println("Lose");
+                outcome = " You Lost :( ";
             }
-            System.out.println("Bot: " + getFullName(botChoice) + " | User: " + getFullName(userChoice.substring(0, 1)));
+
+            // Prints a formatted message
+            System.out.println(generateResultsText(outcome, results));
         }
+    }
+
+    private static String generateResultsText(String outcome, String results) {
+        String borderLine = "─".repeat((results.length() / 2) - (outcome.length() / 2) + 2);
+        return "\u001b[31m \n ┌" + borderLine + outcome + borderLine + "┐" +
+                "\n │ \u001b[0m" + padString(results, borderLine.length() * 2 + outcome.length() - 3) + "\u001b[31m │" +
+                "\n └" + "─".repeat(borderLine.length() * 2 + outcome.length()) + "┘";
+    }
+
+    private static String padString(String text, int length) {
+        StringBuilder strBuilder = new StringBuilder(text);
+        while(strBuilder.length() <= length) {
+            if(strBuilder.length() < length - 1) strBuilder.insert(0, " ");
+            strBuilder.append(" ");
+        }
+
+        return strBuilder.toString();
     }
 
     /**
@@ -70,11 +92,11 @@ public class Main {
         // Switches between the letters
         switch (letter) {
             case "r":
-                return "Rock";
+                return "Rock \uD83E\uDEA8";
             case "p":
-                return "Paper";
+                return "Paper \uD83D\uDCDC";
             case "s":
-                return "Scissors";
+                return "Scissors ✂️";
         }
         return null;
     }
