@@ -1,8 +1,5 @@
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,13 +8,15 @@ public class Main {
         HashMap<String, String> winningValues = initializeValues();
         List<String> possibleValues = Arrays.asList("rock", "paper", "scissors", "r", "p", "s");
         Scanner scan = new Scanner(System.in);
+        String color;
+        Random r = new Random();
 
         // Repeats the game if the user does not Quit
         while (true) {
 
             // Get User + Bot choices
             String userChoice = scan.nextLine().toLowerCase();
-            String botChoice = possibleValues.get((int) (Math.random() * 3 + 3));
+            String botChoice = possibleValues.get(r.nextInt(3) + 3); // Used random.nextInt() instead of Math.random() as it is less biased
 
             // Checks if User Input is Q or QUIT
             if(userChoice.equals("q") || userChoice.equals("quit")) {
@@ -30,19 +29,23 @@ public class Main {
             }
 
             String outcome;
-            String results = "Bot: " + getFullName(botChoice) + " || User: " + getFullName(userChoice.substring(0, 1));
 
             // Compares bot value to user value and determines the winner
             if (botChoice.equals(userChoice)) {
                 outcome = " Tie. ";
+                color = "\u001b[33m";
             } else if (botChoice.equals(winningValues.get(userChoice))) {
                 outcome = " You Won! ";
+                color = "\u001b[34m";
             } else {
                 outcome = " You Lost :( ";
+                color = "\u001b[31m";
             }
 
+            String results =  "User: " + getFullName(userChoice.substring(0, 1)) + color + " ||\u001b[0m Bot: " + getFullName(botChoice);
+
             // Prints a formatted message
-            System.out.println(generateResultsText(outcome, results));
+            System.out.println(generateResultsText(outcome, results, color));
         }
     }
 
@@ -52,17 +55,18 @@ public class Main {
      *
      * @param outcome The Outcome String
      * @param results The Results String
+     * @param color The color of the decorated text
      * @return Returns decorated text as String
      */
-    private static String generateResultsText(String outcome, String results) {
+    private static String generateResultsText(String outcome, String results, String color) {
 
         // Initialize the Variables
-        String borderLine = "─".repeat((results.length() / 2) - (outcome.length() / 2) + 2);
+        String borderLine = "─".repeat((results.length() / 2) - (outcome.length() / 2) - 3);
         int totalLineLength = borderLine.length() * 2 + outcome.length();
 
         // Returns the Padded String with certain color
-        return "\u001b[31m \n ┌" + borderLine + outcome + borderLine + "┐" +
-                "\n │ \u001b[0m" + padString(results, totalLineLength - 3) + "\u001b[31m │" +
+        return color + "\n ┌" + borderLine + outcome + borderLine + "┐" +
+                "\n │ \u001b[0m" + padString(results, totalLineLength + 6) + color + " │" +
                 "\n └" + "─".repeat(totalLineLength) + "┘";
     }
 
@@ -79,7 +83,7 @@ public class Main {
 
         // Checks if the String is less than the length
         while(strBuilder.length() <= length) {
-            if(strBuilder.length() < length - 1) strBuilder.insert(0, " ");
+            if(strBuilder.length() < length) strBuilder.insert(0, " ");
             strBuilder.append(" ");
         }
 
