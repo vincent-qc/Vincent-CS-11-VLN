@@ -16,10 +16,12 @@ public class Main {
 
         // Repeats the game if the user does not Quit
         while (true) {
-            System.out.println( "\u001b[32m" +
+            System.out.println( "\n\u001b[32m" +
                     "\n" + "┌──────────────── Welcome to Rock Paper Scissors ────────────────┐" +
                     "\n" + "│                        Pick your fighter                       │" +
                     "\n" + "│  Rock (R)  │  Paper (P)  │ Scissors (S) | Score(SC) | Quit (Q) │" +
+                    "\n" + "├────────────┴─────────────┴──────────────┴───────────┴──────────┤" +
+                    "\n" + "|" + padString("User Score: " + playerScore + "    CPU Score: " + computerScore, 63) + "│" +
                     "\n" + "└────────────────────────────────────────────────────────────────┘"
             );
 
@@ -31,7 +33,8 @@ public class Main {
             if(userChoice.equals("q") || userChoice.equals("quit")) {
                 break;
             } else if(userChoice.equals("score") || userChoice.equals("sc")) {
-
+                System.out.println(generateResultsText(playerScore, computerScore));
+                continue;
             } else if (!possibleValues.contains(userChoice)) {
 
                 // Checks if User Input is valid
@@ -61,7 +64,20 @@ public class Main {
             System.out.println(generateResultsText(outcome, results, color));
         }
 
-        System.out.println("Thanks for playing RPS!");
+        System.out.println(
+                "\n" + "┌─────────────────────────────┐" +
+                "\n" + "│   Thanks For Playing RPS!   │" +
+                "\n" + "└─────────────────────────────┘"
+        );
+    }
+
+    private static String generateResultsText(int playerScore, int computerScore) {
+        return "\u001b[32m" +
+                "\n" + "┌──────────── Score ────────────┐" +
+                "\n" + "│ User Score: " + padString(Integer.toString(playerScore), 17) + "│" +
+                "\n" + "├───────────────────────────────┤" +
+                "\n" + "│ CPU Score:  " + padString(Integer.toString(playerScore), 17) + "│" +
+                "\n" + "└───────────────────────────────┘";
     }
 
     /**
