@@ -11,8 +11,17 @@ public class Main {
         String color;
         Random r = new Random();
 
+        // Score
+        int playerScore = 0, computerScore = 0;
+
         // Repeats the game if the user does not Quit
         while (true) {
+            System.out.println( "\u001b[32m" +
+                    "\n" + "┌──────────────── Welcome to Rock Paper Scissors ────────────────┐" +
+                    "\n" + "│                        Pick your fighter                       │" +
+                    "\n" + "│  Rock (R)  │  Paper (P)  │ Scissors (S) | Score(SC) | Quit (Q) │" +
+                    "\n" + "└────────────────────────────────────────────────────────────────┘"
+            );
 
             // Get User + Bot choices
             String userChoice = scan.nextLine().toLowerCase();
@@ -21,6 +30,8 @@ public class Main {
             // Checks if User Input is Q or QUIT
             if(userChoice.equals("q") || userChoice.equals("quit")) {
                 break;
+            } else if(userChoice.equals("score") || userChoice.equals("sc")) {
+
             } else if (!possibleValues.contains(userChoice)) {
 
                 // Checks if User Input is valid
@@ -37,9 +48,11 @@ public class Main {
             } else if (botChoice.equals(winningValues.get(userChoice))) {
                 outcome = " You Won! ";
                 color = "\u001b[34m";
+                playerScore += 1;
             } else {
                 outcome = " You Lost :( ";
                 color = "\u001b[31m";
+                computerScore += 1;
             }
 
             String results =  "User: " + getFullName(userChoice.substring(0, 1)) + color + " ||\u001b[0m Bot: " + getFullName(botChoice);
@@ -47,6 +60,8 @@ public class Main {
             // Prints a formatted message
             System.out.println(generateResultsText(outcome, results, color));
         }
+
+        System.out.println("Thanks for playing RPS!");
     }
 
     /**
@@ -65,9 +80,9 @@ public class Main {
         int totalLineLength = borderLine.length() * 2 + outcome.length();
 
         // Returns the Padded String with certain color
-        return color + "\n ┌" + borderLine + outcome + borderLine + "┐" +
-                "\n │ \u001b[0m" + padString(results, totalLineLength + 6) + color + " │" +
-                "\n └" + "─".repeat(totalLineLength) + "┘";
+        return color + "\n" + "┌" + borderLine + outcome + borderLine + "┐" +
+                "\n" + "│ \u001b[0m" + padString(results, totalLineLength + 6) + color + " │" +
+                "\n" + "└" + "─".repeat(totalLineLength) + "┘";
     }
 
     /**
