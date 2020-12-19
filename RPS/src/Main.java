@@ -30,14 +30,12 @@ public class Main {
             String botChoice = possibleValues.get(r.nextInt(3) + 3); // Used random.nextInt() instead of Math.random() as it is less biased
 
             // Checks if User Input is Q or QUIT
-            if(userChoice.equals("q") || userChoice.equals("quit")) {
+            if(userChoice.equals("q") || userChoice.equals("quit")) {  // Checks if the user wants to quit
                 break;
-            } else if(userChoice.equals("score") || userChoice.equals("sc")) {
+            } else if(userChoice.equals("score") || userChoice.equals("sc")) { // Checks if the user wants to see the scoreboard
                 System.out.println(generateResultsText(playerScore, computerScore));
                 continue;
-            } else if (!possibleValues.contains(userChoice)) {
-
-                // Checks if User Input is valid
+            } else if (!possibleValues.contains(userChoice)) { // Checks if the users input was valid
                 System.out.println("Sorry, " + userChoice + " was not a Valid Input :/");
                 continue;
             }
@@ -71,6 +69,13 @@ public class Main {
         );
     }
 
+    /**
+     * Takes in two Strings and creates scoreboard
+     * [This Method is for Decorative Purposes ONLY]
+     * @param playerScore The player's score
+     * @param computerScore The CPU's score
+     * @return Returns the scoreboard as a String
+     */
     private static String generateResultsText(int playerScore, int computerScore) {
         return "\u001b[32m" +
                 "\n" + "┌──────────── Score ────────────┐" +
