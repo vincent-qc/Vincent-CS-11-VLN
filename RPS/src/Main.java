@@ -19,6 +19,7 @@ public class Main {
             System.out.println( "\n\u001b[32m" +
                     "\n" + "┌──────────────── Welcome to Rock Paper Scissors ────────────────┐" +
                     "\n" + "│                        Pick your fighter                       │" +
+                    "\n" + "│                                                                │" +
                     "\n" + "│  Rock (R)  │  Paper (P)  │ Scissors (S) | Score(SC) | Quit (Q) │" +
                     "\n" + "├────────────┴─────────────┴──────────────┴───────────┴──────────┤" +
                     "\n" + "|" + padString("User Score: " + playerScore + "    CPU Score: " + computerScore, 63) + "│" +
