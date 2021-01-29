@@ -30,7 +30,7 @@ public class Main {
             String userChoice = scan.nextLine().toLowerCase();
             String botChoice = possibleValues.get(r.nextInt(3) + 3); // Used random.nextInt() instead of Math.random() as it is less biased
 
-            // Checks if User Input is Q or QUIT
+            // Checks if User Input is QUIT, SCORE or VALID
             if(userChoice.equals("q") || userChoice.equals("quit")) {  // Checks if the user wants to quit
                 break;
             } else if(userChoice.equals("score") || userChoice.equals("sc")) { // Checks if the user wants to see the scoreboard
