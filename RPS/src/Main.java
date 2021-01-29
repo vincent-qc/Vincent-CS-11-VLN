@@ -15,6 +15,8 @@ public class Main {
         int playerScore = 0, computerScore = 0;
 
         // Repeats the game if the user does not Quit
+        // Ignore WHILE Loop for 1st RPS Assignment
+        // WHILE Loop is for GAME LOOP Assignment (I forgot to submit assignment before putting a game loop)
         while (true) {
             System.out.println( "\n\u001b[32m" +
                     "\n" + "┌──────────────── Welcome to Rock Paper Scissors ────────────────┐" +
