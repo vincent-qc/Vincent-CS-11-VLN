@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String[] stringArray = {"Foo", "Bar", "Baz"};
@@ -5,20 +8,27 @@ public class Main {
         Double[] doubleArray = {1.1, 2.2, 3.3, 4.4, 6.6};
 
         // Test Cases
-        pushEnd(stringArray, "Hello World");
-        popEnd(intArray);
-        insert(doubleArray, 5.5, 4);
+        System.out.println(Arrays.toString(pushEnd(stringArray, "Hello World")));
+        System.out.println(Arrays.toString(popEnd(intArray)));
+        System.out.println(Arrays.toString(insert(doubleArray, 5.5, 4)));
     }
 
-    private static <T> void pushEnd(T[] array, T item) {
+    private static <T> T[] pushEnd(T[] array, T item) {
+        Object[] newArray = new Object[array.length + 1];
 
+        for(int i = 0; i < array.length; i++) { // Can also be done with < System.arraycopy(array, 0, newArray, 0, array.length); >
+            newArray[i] = array[i];
+        }
+        newArray[array.length] = item;
+
+        return (T[]) newArray;
     }
 
-    private static <T> void popEnd(T[] array) {
-
+    private static <T> T[] popEnd(T[] array) {
+        return null;
     }
 
-    private static <T> void insert(T[] array, T item, int index) {
-
+    private static <T> T[] insert(T[] array, T item, int index) {
+        return null;
     }
 }
