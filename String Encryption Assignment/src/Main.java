@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-
+        
         // Test Cases
         System.out.println(encryptString("Hello"));
         System.out.println(decryptString("oHellay"));
