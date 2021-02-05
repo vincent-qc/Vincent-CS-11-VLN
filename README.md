@@ -8,6 +8,7 @@ Handin repo for CS 11 assignments
 - [Rock Paper Scissors Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/RPS%20Assignment/src/Main.java)
 - [String Encryption Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/String%20Encryption%20Assignment/src/Main.java)
 - [Arrays Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/String%20Encryption%20Assignment/src/Main.java)
+- [School Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/School%20Assignment/src/Main.java)
 
 ## **Projects**
 - [Project 1](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/ProjectNumber1/src/Main.java)
