@@ -1,20 +1,42 @@
 import java.util.ArrayList;
 
+/**
+ * The School Class contains a Name, IsPublic and Address field
+ * It also contains a list of all the students, teachers and courses
+ */
 public class School {
     private String name;
-    private boolean isPublic = true; // Defaults to true
+    private boolean isPublic;
     private String address;
 
     private ArrayList<Student> students = new ArrayList<>();
     private ArrayList<Teacher> teachers = new ArrayList<>();
     private ArrayList<String> courses = new ArrayList<>();
 
+    /**
+     * The constructor for School
+     *
+     * @param name The name of the School
+     * @param isPublic If the school is public
+     * @param address The address of the school
+     */
     School(String name, boolean isPublic, String address) {
         this.name = name;
         this.isPublic = isPublic;
         this.address = address;
     }
 
+    /**
+     * Prints the Info of the school in format:
+     *
+     * [Name]
+     * [IsPublic]
+     * [Address]
+     *
+     * [List of Teachers]
+     *
+     * [List of Students]
+     */
     public void printInfo() {
         System.out.println("School Name: " + name);
         System.out.println("This school is " + (isPublic ? "" : "not") + "public");
