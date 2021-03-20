@@ -5,8 +5,8 @@ import java.util.zip.CheckedInputStream;
 
 public class Customer {
     private int accountNumber;
-    private ArrayList<Deposit> deposits;
-    private ArrayList<Withdraw> withdraws;
+    private ArrayList<Deposit> deposits = new ArrayList<Deposit>();
+    private ArrayList<Withdraw> withdraws = new ArrayList<Withdraw>();
     private double checkBalance;
     private double savingBalance;
     private double savingRate;
@@ -110,4 +110,21 @@ public class Customer {
         }
     }
 
+    /**
+     * Need this Getter for Overdraft Test (Checking)
+     *
+     * @return The Checking Balance
+     */
+    public double getCheckBalance() {
+        return checkBalance;
+    }
+
+    /**
+     * Need this Getter for Overdraft Test (Saving)
+     *
+     * @return The Saving Balance
+     */
+    public double getSavingBalance() {
+        return savingBalance;
+    }
 }
