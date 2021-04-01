@@ -91,7 +91,8 @@ public class Controller {
 
         try {
             parsedAmt = Integer.parseInt(amt);
-            if((money - parsedAmt >= 0) && (parsedAmt > 0)) money -= Integer.parseInt(amt);
+            if((money - parsedAmt < 0) || (parsedAmt <= 0)) return;
+            money -= Integer.parseInt(amt);
         } catch(NumberFormatException e) {
             System.out.println("Invalid Number");
             return;
