@@ -11,6 +11,7 @@ Handin repo for CS 11 assignments
 - [School Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/School%20Assignment/src/)
 - [Integer Set Test Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/Integer%20Set%20Test%20Assignment/TestCases/IntegerSetTests.java)
 - [Bank Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/Bank%20Assignment/src/Customer.java)
+- [Game of Chance Assignment](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/Game%20of%20Chance%20Assignment/src/sample/Controller.java)
 
 ## **Projects**
 - [Project 1](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/ProjectNumber1/src/Main.java)
