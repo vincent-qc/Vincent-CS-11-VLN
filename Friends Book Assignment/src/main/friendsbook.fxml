@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="600.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" text="The Friends List">
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <SplitPane dividerPositions="0.35" prefHeight="499.0" prefWidth="900.0">
+            <ListView fx:id="listFriends" onMouseClicked="#displayFriend" prefHeight="296.0" prefWidth="115.0" />
+            <VBox fx:id="vboxFriendInfo" alignment="TOP_CENTER" prefHeight="480.0" prefWidth="581.0" visible="false">
+                <children>
+                    <Label fx:id="lbName" alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="413.0" text="FNAME LNAME" textAlignment="CENTER">
+                        <font>
+                            <Font name="JetBrains Mono NL Regular" size="24.0" />
+                        </font>
+                    </Label>
+                    <AnchorPane prefHeight="412.0" prefWidth="581.0">
+                        <children>
+                            <Button fx:id="btnDeleteFriend" layoutX="5.0" layoutY="388.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="26.0" prefWidth="572.0" text="DELETE" textFill="#d71717" underline="true">
+                                <font>
+                                    <Font name="JetBrains Mono NL Regular" size="18.0" />
+                                </font>
+                                <padding>
+                                    <Insets bottom="6.0" left="11.0" right="9.0" top="6.0" />
+                                </padding>
+                            </Button>
+                            <GridPane alignment="CENTER" layoutX="22.0" layoutY="66.0" prefHeight="139.0" prefWidth="545.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="596.0" text="Email">
+                                        <font>
+                                            <Font name="JetBrains Mono NL Regular" size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="386.0" text="Phone" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="JetBrains Mono NL Regular" size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lbPhoneValue" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="101.0" prefHeight="27.0" prefWidth="386.0" text="none" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="JetBrains Mono NL Regular" size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lbEmailValue" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="32.0" prefHeight="27.0" prefWidth="596.0" text="none" GridPane.columnIndex="1">
+                                        <font>
+                                            <Font name="JetBrains Mono NL Regular" size="20.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </GridPane>
+                     <Button fx:id="btnStar" layoutX="263.0" layoutY="-7.0" mnemonicParsing="false" onAction="#starFriend" prefHeight="25.0" prefWidth="52.0" text="Star" textFill="#ed951f" AnchorPane.bottomAnchor="407.0">
+                        <font>
+                           <Font name="JetBrains Mono NL Regular" size="14.0" />
+                        </font>
+                        <padding>
+                           <Insets bottom="-4.0" top="-4.0" />
+                        </padding>
+                     </Button>
+                        </children>
+                    </AnchorPane>
+                </children>
+            </VBox>
+        </SplitPane>
+        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="900.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="25.0" prefWidth="140.0" text="Add a Friend" textAlignment="CENTER">
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fieldFName" alignment="TOP_CENTER" prefHeight="28.0" prefWidth="183.0" promptText="First Name">
+                    <HBox.margin>
+                        <Insets left="6.0" right="6.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="-5.0" top="3.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="fieldLName" alignment="TOP_CENTER" layoutX="405.0" layoutY="16.0" prefHeight="28.0" prefWidth="172.0" promptText="Last Name">
+                    <padding>
+                        <Insets bottom="-5.0" top="3.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="6.0" />
+                    </HBox.margin>
+                </TextField>
+                <TextField fx:id="fieldEmail" alignment="TOP_CENTER" layoutX="514.0" layoutY="16.0" prefHeight="28.0" prefWidth="174.0" promptText="Email">
+                    <padding>
+                        <Insets bottom="-5.0" top="3.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="6.0" />
+                    </HBox.margin>
+                </TextField>
+                <TextField fx:id="fieldPhone" alignment="TOP_CENTER" layoutX="622.0" layoutY="16.0" prefHeight="28.0" prefWidth="125.0" promptText="Phone">
+                    <padding>
+                        <Insets bottom="-5.0" top="3.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="6.0" />
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#addNewFriend" prefHeight="22.0" prefWidth="63.0" text="ADD">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" top="2.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="JetBrains Mono NL Regular" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="2.0" left="7.0" right="5.0" top="4.0" />
+                    </padding>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>
