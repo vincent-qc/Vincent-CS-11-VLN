@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class Controller {
     private static final ArrayList<Friend> allFriends = new ArrayList<>();
-    public ListView<Friend> listFriends = new ListView<>();
 
     // JavaFX Items
+    public ListView<Friend> listFriends = new ListView<>();
     public Label lbName;
     public TextField fieldFName;
     public TextField fieldLName;
@@ -27,6 +27,10 @@ public class Controller {
     public Button btnDeleteFriend;
     public Button btnStar;
 
+    /**
+     * Updates the ListView to include new Friends
+     * Moves all starred Friends to the top
+     */
     private void updateList() {
 
         // Reset List
@@ -47,6 +51,11 @@ public class Controller {
         if (selected == null) vboxFriendInfo.setVisible(false);
     }
 
+    /**
+     * Adds new Friend to the Friends List, and updates the UI
+     * A First and Last name are required for creating a friend
+     * An email or phone are optional
+     */
     public void addNewFriend() {
 
         // Check if the name fields are empty
@@ -66,6 +75,14 @@ public class Controller {
         updateList();
     }
 
+    /**
+     * Displays the friend info including:
+     * Full Name
+     * Email (or 'none')
+     * Phone (or 'none')
+     *
+     * @param mouseEvent When CLICKED on an item in the ListView, Displays the Friend's info
+     */
     public void displayFriend(MouseEvent mouseEvent) {
         vboxFriendInfo.setVisible(true); // It was set Invisible since we don't want the user to see the default values when he hasn't selected anyone
 
@@ -77,12 +94,22 @@ public class Controller {
         lbPhoneValue.setText(selected.getPhone());
     }
 
+    /**
+     * Deletes a Friend
+     *
+     * @param actionEvent
+     */
     public void deleteFriend(ActionEvent actionEvent) {
         Friend selected = listFriends.getSelectionModel().getSelectedItem();
         allFriends.remove(selected);
         updateList();
     }
 
+    /**
+     * Stars a Friend
+     *
+     * @param actionEvent
+     */
     public void starFriend(ActionEvent actionEvent) {
         Friend selected = listFriends.getSelectionModel().getSelectedItem();
         selected.star();
