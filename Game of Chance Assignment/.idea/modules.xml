@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Game of Chance Assignment.iml" filepath="$PROJECT_DIR$/Game of Chance Assignment.iml" />
+      <module fileurl="file://$USER_HOME$/Code/javafx-sdk-11.0.2/JavaFX.iml" filepath="$USER_HOME$/Code/javafx-sdk-11.0.2/JavaFX.iml" />
     </modules>
   </component>
 </project>
