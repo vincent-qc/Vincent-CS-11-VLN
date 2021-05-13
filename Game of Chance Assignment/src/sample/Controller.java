@@ -42,9 +42,11 @@ public class Controller {
     private int[] results = new int[3];
 
     /**
-     * Sets the player's name
+     * Requires: Nothing
+     * Modifies: userName, lbTitle, hboxName, vboxBet, lbBalance, threshold, lbBetQuestion
+     * Effects: Set the user's name and generates the first prompt
      *
-     * @param actionEvent Ignore
+     * @param actionEvent
      */
     public void submitName(ActionEvent actionEvent) {
 
@@ -66,9 +68,11 @@ public class Controller {
     }
 
     /**
-     * The User Bet that the Largest Number will be Bigger than the Threshold
+     * Requires: Nothing
+     * Modifies: bigger
+     * Effects: Bets that the number will be bigger
      *
-     * @param actionEvent Ignore
+     * @param actionEvent
      */
     public void betYes(ActionEvent actionEvent) {
         bigger = true;
@@ -76,9 +80,11 @@ public class Controller {
     }
 
     /**
-     * The User Bet that the Largest Number will be Smaller than the Threshold
+     * Requires: Nothing
+     * Modifies: bigger
+     * Effects: Bets that the number will be smaller
      *
-     * @param actionEvent Ignore
+     * @param actionEvent
      */
     public void betNo(ActionEvent actionEvent) {
         bigger = false;
@@ -86,9 +92,9 @@ public class Controller {
     }
 
     /**
-     * Create a New Bet (New Threshold)
-     * Removes the Previous Round's Text
-     * Enables The Bet Buttons
+     * Requires: Nothing
+     * Modifies: threshold, Result labels, Win Result, Yes/No buttons
+     * Effects: Creates a new bet, hides or enables certain elements
      */
     public void newBet() {
         threshold = r.nextInt(4) + 6; // Random number between 6 and 9
@@ -108,9 +114,9 @@ public class Controller {
     // Private Functions
 
     /**
-     * Bet Using the Inputted Amount (Must be Integer)
-     * Adds / Subtracts the Amount
-     * Displays a Win / Lose Message
+     * Requires: Nothing
+     * Modifies: won, amt, money, results[], Result Labels, Yes/No buttons, Win Result
+     * Effects: Bets using the inputted amount (±money) and displays results
      */
     private void bet() {
 
