@@ -8,11 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
-import java.util.ArrayList;
-
 public class Controller {
-    private static final ArrayList<Friend> allFriends = new ArrayList<>();
-
     // JavaFX Items
     public ListView<Friend> listFriends = new ListView<>();
     public Label lbName;
@@ -26,23 +22,26 @@ public class Controller {
     public VBox vboxFriendInfo;
     public Button btnDeleteFriend;
     public Button btnStar;
+    public Button btnLoad;
+    public Button btnSave;
 
     /**
-     * Updates the ListView to include new Friends
-     * Moves all starred Friends to the top
+     * Requires: Nothing
+     * Modifies: listFriends
+     * Effects: Updates the ListView to include new Friends
+     *          Moves all starred Friends to the top
      */
     private void updateList() {
-
         // Reset List
         listFriends.getItems().clear();
 
         // Add all the starred Friends to the top
-        for (Friend item : allFriends)
+        for (Friend item : IOHandler.getAllFriends())
             if (item.isStarred())
                 listFriends.getItems().add(item);
 
         // 2nd Iteration to add the rest of the people
-        for (Friend item : allFriends)
+        for (Friend item : IOHandler.getAllFriends())
             if (!item.isStarred())
                 listFriends.getItems().add(item);
 
@@ -52,9 +51,9 @@ public class Controller {
     }
 
     /**
-     * Adds new Friend to the Friends List, and updates the UI
-     * A First and Last name are required for creating a friend
-     * An email or phone are optional
+     * Requires: Nothing
+     * Modifies: IOHandler.allFriends
+     * Effects: Adds Friend to the list and updates UI
      */
     public void addNewFriend() {
 
@@ -65,12 +64,13 @@ public class Controller {
         }
 
         // Add a friend to the list
-        allFriends.add(new Friend(
+        IOHandler.addItemAllFriends(new Friend(
                 fieldFName.getText(),
                 fieldLName.getText(),
                 fieldEmail.getText().isEmpty() ? "none" : fieldEmail.getText(),
-                fieldPhone.getText().isEmpty() ? "none" : fieldPhone.getText())
-        );
+                fieldPhone.getText().isEmpty() ? "none" : fieldPhone.getText(),
+                false
+        ));
 
         updateList();
     }
@@ -101,9 +101,10 @@ public class Controller {
      */
     public void deleteFriend(ActionEvent actionEvent) {
         Friend selected = listFriends.getSelectionModel().getSelectedItem();
-        allFriends.remove(selected);
+        IOHandler.removeItemAllFriends(selected);
         updateList();
     }
+
 
     /**
      * Stars a Friend
@@ -113,6 +114,27 @@ public class Controller {
     public void starFriend(ActionEvent actionEvent) {
         Friend selected = listFriends.getSelectionModel().getSelectedItem();
         selected.star();
+        updateList();
+    }
+
+    // IO
+
+    /**
+     * Saves the Friends
+     *
+     * @param actionEvent
+     */
+    public void saveList(ActionEvent actionEvent) {
+        IOHandler.writeOut();
+    }
+
+    /**
+     * Loads all saved Friends
+     *
+     * @param actionEvent
+     */
+    public void loadList(ActionEvent actionEvent) {
+        IOHandler.readIn();
         updateList();
     }
 }

@@ -15,6 +15,13 @@ public class Friend {
         this.phone = phone;
     }
 
+    /**
+     * Requires: Nothing
+     * Modifies: Nothing
+     * Effects: Returns Formatted String
+     *
+     * @return Formatted String with FName, LName and (✭)
+     */
     @Override
     public String toString() {
         return fName.toUpperCase() + " " + lName.toUpperCase() + (starred ? "   ✭" : ' ');

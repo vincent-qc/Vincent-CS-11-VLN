@@ -28,7 +28,9 @@ public class Controller {
     public Button btnStar;
 
     /**
-     * Updates the ListView to include new Friends
+     * Requires: Nothing
+     * Modifies: listFriends
+     * Effects: Updates the ListView to include new Friends
      * Moves all starred Friends to the top
      */
     private void updateList() {
