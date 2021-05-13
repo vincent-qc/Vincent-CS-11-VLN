@@ -20,7 +20,10 @@ public class Main {
     }
 
     /**
-     * Finds a word in an arraylist of lines
+     * Requires: String word, Lines
+     * Modifies: Nothing
+     * Effects: returns a formatted string detailing what the indices are
+     *
      * @param word The word to find
      * @param lines The arraylist of lines
      * @return Formatted String
