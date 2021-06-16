@@ -17,3 +17,4 @@ Handin repo for CS 11 assignments
 
 ## **Projects**
 - [Project 1](https://github.com/Crabo-7498/Vincent-CS-11-VLN/blob/main/ProjectNumber1/src/Main.java)
+- [Project 2](https://github.com/Crabo-7498/cs-11-final)
